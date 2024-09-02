@@ -23,5 +23,5 @@ Follow these steps to run the dental website on your local machine:
   3) npm start
 
 
-#V iew the website:
+#View the website:
 Open your web browser and navigate to http://localhost:3000 to see the website running locally.
