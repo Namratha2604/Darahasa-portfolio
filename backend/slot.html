@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot</title>
+    <script src="https://kit.fontawesome.com/5a28180cca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: #cfe0f0;
+        }
+        #app{
+            margin-left: 250px;
+            margin-top: 170px;
+            /* display: flex; */
+            /* flex-direction: row; */
+        }
+        #app h2{
+            font-size: 50px;
+        }
+        #app p{
+            font-size: 20px;
+        }
+        #date-input{
+            margin-top: 70px;
+            margin-left: 250px;
+            font-size: 25px;
+        }
+        #appointmentTime{
+              margin-top: 0px;
+            margin-bottom: 40px; 
+            padding-left: 16px; 
+            font-size: 26px;
+            padding-left: 20px;
+            padding-right: 110px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: none;
+            color: #9fa2a2;
+            font-style: italic;
+        }
+        form{
+            margin-bottom: 200px;
+        }
+        footer{
+            background-color: #3b6ea0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: -1%;
+            margin-right: 0%;
+            margin-bottom: -3%;
+            width: 102%;
+            right: 50px;
+        }
+        #date-input hr{
+            color: #3b6ea0;
+            margin-right: 637px;
+            border: 1px solid ;
+            margin-top: -11px;
+            margin-bottom: 20px;
+        }
+
+        #date-input p{
+            font-size: 22px;
+        }
+        .input-details{
+            display: flex;
+            flex-direction: row;
+
+        }
+        #input-email{
+            margin-left: 60px;
+        }
+        /* input{
+            padding-right: 200px;
+            padding-bottom: 25px;
+            text-decoration: none;
+            border: #cfe0f0;
+            border-radius: 2px;
+        } */
+
+        #name{
+            font-size: 26px;
+            /* padding-left: 20px;
+            padding-right: 29px; */
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: none;
+            color: #4a4a4a;
+            font-family: 'Courier New', monospace;
+            padding-left: 2px;
+            padding-right: 0px;
+
+        }
+        #email{
+            font-size: 26px;
+            /* padding-left: 20px;
+            padding-right: 29px; */
+            padding-left: 2px;
+            padding-right: 0px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: none;
+            font-family: 'Courier New', monospace;
+        }
+
+        #phone{
+            /* padding-left: 400px; */
+            width: 49%;
+            font-size: 26px;
+            padding-left: 20px;
+            padding-right: 29px;
+            padding-top: 7px;
+            padding-bottom: 8px;
+            border: none;
+            color: #4a4a4a;
+            font-family: 'Courier New', monospace;
+            
+        }
+
+        .input-details-time{
+            display: flex;
+            flex-direction: row;
+        }
+        #time{
+            margin-left: 88px;
+            padding: 100pxs;
+        }
+        #appointmentDate{
+            /* padding-left: 24px; */
+            font-size: 26px;
+            padding-left: 20px;
+            padding-right: 74px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: none;
+            color: #9fa2a2;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+
+        /* @media screen and (max-width:600px) {
+            #app h2 {
+            font-size: 50px;
+            margin-left: -149px;
+        }
+        #app p {
+            font-size: 20px;
+            margin-left: -145px;
+            margin-right: 54px;
+        }
+        
+        #date-input p {
+    font-size: 21px;
+    margin-left: -132px;
+}
+
+#name {
+    font-size: 26px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    color: #4a4a4a;
+    font-family: 'Courier New', monospace;
+    padding-left: 2px;
+    padding-right: 0px;
+    margin-left: -131px;
+    margin-bottom: 40px;
+}
+#email {
+    font-size: 26px;
+    padding-left: 2px;
+    padding-right: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    font-family: 'Courier New', monospace;
+    margin-left: -192px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+.input-details {
+    display: flex;
+    flex-direction: column;
+}
+#phone {
+    
+    width: 49%;
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 140px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    border: none;
+    color: #4a4a4a;
+    font-family: 'Courier New', monospace;
+    margin-left: -131px;
+}
+.input-details-time {
+    display: flex;
+    flex-direction: column;
+}
+#appointmentTime {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    padding-left: 16px;
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 110px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    color: #9fa2a2;
+    font-style: italic;
+    margin-left: -217px;
+}
+#appointmentDate {
+   
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 84px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    color: #9fa2a2;
+    font-style: italic;
+    margin-left: -131px;
+}
+button {
+        font-size: 20px;
+       
+        padding: 15px 30px;
+        color: #000;
+        background-color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        
+        transition: 0.3s;
+        margin-left: -36px;
+        margin-top: 54px;
+    }
+    #n {
+        margin-top: 10px;
+        margin-left: -128px;
+    }
+    #e{
+        margin-left: -189px;
+    }
+    #p{
+        margin-left: -131px;
+    }
+
+    #d{
+        margin-left: -131px;
+    }
+    #t{
+        margin-left: -213px;
+    }
+    #cd{
+        margin-left: 10px;
+    }
+    #cd {
+        margin-left: -90px;
+        margin-bottom: 74px;
+    }
+
+        } */
+
+
+
+        @media screen and (max-width:320px) {
+            #app h2 {
+                font-size: 50px;
+                margin-left: -169px;
+                }
+            #app p {
+                font-size: 22px;
+                margin-left: -161px;
+                margin-right: -33px;
+            }
+        
+            #date-input p {
+            font-size: 21px;
+            margin-left: -175px;
+            }
+            #cd {
+        margin-left: -131px;
+        margin-bottom: 45px;
+    }
+
+    #name {
+        font-size: 26px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border: none;
+        color: #4a4a4a;
+        font-family: 'Courier New', monospace;
+        padding-left: 2px;
+        padding-right: 0px;
+        margin-left: -208px;
+        margin-bottom: 40px;
+    }
+    #email {
+        font-size: 26px;
+        padding-left: 2px;
+        padding-right: 0px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border: none;
+        font-family: 'Courier New', monospace;
+        margin-left: -264px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .input-details {
+        display: flex;
+        flex-direction: column;
+    }
+    #phone {
+        width: 473%;
+        font-size: 26px;
+        padding-left: 6px;
+        padding-right: 55px;
+        padding-top: 7px;
+        padding-bottom: 8px;
+        border: none;
+        color: #4a4a4a;
+        font-family: 'Courier New', monospace;
+        margin-left: -202px;
+    }
+    .input-details-time {
+        display: flex;
+        flex-direction: column;
+    }
+    #appointmentTime {
+        margin-top: 0px;
+        margin-bottom: 40px;
+        padding-left: 16px;
+        font-size: 26px;
+        padding-left: 20px;
+        padding-right: 110px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border: none;
+        color: #9fa2a2;
+        font-style: italic;
+        margin-left: -282px;
+    }
+    #appointmentDate {
+        font-size: 26px;
+        padding-left: 20px;
+        padding-right: 58px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border: none;
+        color: #9fa2a2;
+        font-style: italic;
+        margin-left: -199px;
+        width: 439%;
+    }
+    button {
+            font-size: 20px;
+        
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            
+            transition: 0.3s;
+            margin-left: -123px;
+            margin-top: 54px;
+        }
+        #n {
+        margin-top: 10px;
+        margin-left: -174px;
+    }
+    #e {
+        margin-left: -228px;
+    }
+        #p {
+        margin-left: -205px;
+    }
+
+    #d {
+        margin-left: -205px;
+    }
+    #t {
+        margin-left: -286px;
+    }
+    #nav {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 45px;
+        margin: -8px;
+        background-color: #3b6ea0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        right: 50px;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(14, 3, 216, 0.06);
+        font-size: 13px;
+        margin-left: -62px;
+    }
+
+    footer {
+    background-color: #3b6ea0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: -3%;
+    margin-right: 27%;
+    margin-bottom: -3%;
+    width: 134%;
+    right: 50px;
+}
+#footer-text {
+        text-align: center;
+        margin-left: 6%;
+    }
+    #footer-icons {
+        margin-left: 43.4%;
+    }
+}
+
+
+
+
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <section id="header">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#intro">About Us</a></li>
+          <li><a href="index.html#service">Services</a></li>
+          <li><a href="slot.html">Slot booking</a></li>
+          <li> </li>
+        </ul>
+    </section>
+
+    <section id="app">
+        <div>
+            <h2>Dental Check-Up Booking</h2>
+            <p>Check out our availability and book the date and time that works for you</p>
+        </div>
+        <!-- <img src="img/5.jpeg" alt=""> -->
+
+    </section>
+    <section id="date-input">
+        <form onsubmit="validatePhone()">
+            <h1 id="cd">Client Details</h1>
+            <hr>
+            <p>Tell us bit about yourself</p>
+            <br>
+            <div class="input-details">
+                <div>
+                    <label id="n" for="name">Name </label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Jhon" required>
+                </div>
+                <div id="input-email">
+                    <label id="e" for="email">Email </label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="abc@mail.com" required>
+                </div>
+            </div>
+            <br>
+            <label id="p" for="phone">Phone number  </label>
+            <br>
+            <!-- <input type="text" id="phone" name="phone" required> -->
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" placeholder="0000000000" required>
+            <br><br><br>
+            <div class="input-details-time">
+                <div id="date-inp">
+                    <label id="d" for="appointmentDate">Select Appointment Date:</label>
+                    <br>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+                <div id="time">
+                    <label id="t" for="appointmentTime">Select Appointment Time:</label>
+                    <br>
+                    <input type="time" id="appointmentTime" name="appointmentTime" min="14:00" max="16:00" required>                
+                </div>
+            </div>
+            
+            <br>
+    
+            <button type="submit" onsubmit="validatePhone()" onclick="Watsapp();">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <h4 id="footer-text">Follow me</h4>
+       <div id="footer-icons">
+         <i class="fa-brands fa-linkedin"></i>
+         <i class="fa-brands fa-instagram"></i>
+         <i class="fa-brands fa-facebook"></i>
+       </div>
+       <p id="footer-text">© Copyright 2024 All rights reserved by Darahasa</p>
+     </footer>
+
+      <script>
+        function validatePhone() {
+            const phoneInput = document.getElementById('phone').value;
+            
+            if (/^\d{10}$/.test(phoneInput)) {
+            return true; 
+            } else {
+            alert('Please enter a valid 10-digit phone number.');
+            return false;
+            }
+        }
+        function Watsapp(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var appointmentDate = document.getElementById("appointmentDate").value;
+            var appointmentTime = document.getElementById("appointmentTime").value;
+
+
+            var url = "https://wa.me/918374420098?text="
+            +"Name : "+name+"%0a"
+            +"Email : "+email+"%0a"
+            +"Phone : "+phone+"%0a"
+            +"Date : "+appointmentDate+"%0a"
+            +"Time : "+appointmentTime;
+            
+            window.open(url,'_blank').focus();
+
+
+        }
+
+
+     </script>
+     
+        
+</body>
+</html>
