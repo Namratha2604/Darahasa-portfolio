@@ -270,7 +270,7 @@ button {
 
 
 
-        @media screen and (max-width:320px) {
+        @media screen and (min-device-width : 320px) and (max-device-width : 480px)   {
             #app h2 {
                 font-size: 50px;
                 margin-left: -169px;
@@ -453,7 +453,7 @@ button {
             <h2>Dental Check-Up Booking</h2>
             <p>Check out our availability and book the date and time that works for you</p>
         </div>
-        <!-- <img src="img/5.jpeg" alt=""> -->
+       
 
     </section>
     <section id="date-input">
@@ -477,7 +477,6 @@ button {
             <br>
             <label id="p" for="phone">Phone number  </label>
             <br>
-            <!-- <input type="text" id="phone" name="phone" required> -->
             <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" placeholder="0000000000" required>
             <br><br><br>
             <div class="input-details-time">
@@ -498,7 +497,7 @@ button {
             <button type="submit" onsubmit="validatePhone()" onclick="Watsapp();">Submit</button>
         </form>
     </section>
-
+    
     <footer>
         <h4 id="footer-text">Follow me</h4>
        <div id="footer-icons">
