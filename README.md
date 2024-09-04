@@ -25,3 +25,10 @@ Follow these steps to run the dental website on your local machine:
 
 #View the website:
 Open your web browser and navigate to http://localhost:3000 to see the website running locally.
+
+#Deployement - render.com
+
+#Website link :-
+https://darahasa-portfolio.onrender.com
+
+
