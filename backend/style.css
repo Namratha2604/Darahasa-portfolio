@@ -1,7 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
-
+#logo{
+    height: 50px;
+    width: 40px;
+    margin-left: 10px;
+}
 #nav {
     display: flex;
     align-items: center;
