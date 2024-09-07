@@ -118,7 +118,11 @@ button:hover{
 }
 
 #intro img{
-    margin-left: -70px;
+    
+        margin-left: -50px;
+        width: 37%;
+        border-radius: 150px;
+        margin-right: 100px;
     
 }
 
