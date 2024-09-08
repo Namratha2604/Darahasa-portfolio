@@ -9,7 +9,7 @@
 </head>
 <body>
   <section id="header">
-    
+
     <ul id="nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#intro-img">About Us</a></li>
@@ -76,12 +76,12 @@
         
         <p>At <i>WhatsUp Dentist</i>, we offer a comprehensive online consultation service, designed to provide you with expert dental care from the comfort of your home. Whether you need a second opinion or have specific dental concerns, Dr. Darahasa is here to assist you through a convenient and secure online platform. Our online consultations allow you to discuss your symptoms, receive personalized advice, and explore treatment options without the need for a physical visit. Experience the ease and efficiency of virtual dental care, where your oral health needs are addressed promptly and professionally.
         </p>
-        <button class="submit-butto">Consult now</button>
+        <button id="btn" class="submit-button">Book now</button>
       </div>
     </section>
 
     <h1 id="client-h1">Look What Our Clients Say</h1>
-    <section id="client" >
+    <section id="client">
         <div class="cli-box">
           <p>Dr. Darahasa's online consultation was incredibly helpful. I received clear explanations and effective solutions for my dental issues without needing to visit the clinic. The convenience and thoroughness of the service made a big difference. Very satisfied with the outcome! <br><br> <i>-Srinivas</i></p>
         </div>
@@ -103,7 +103,7 @@
       </div>
       <div class="form">
           <input type="text" placeholder="your mobile number">
-          <button class="normal">sign up</button> 
+          <button class="normal">Book Now</button> 
       </div>
  </section>
 
@@ -121,9 +121,13 @@
       document.querySelector('.submit-button').addEventListener('click', function() {
             window.location.href = 'slot.html';
         });
-      document.querySelector('.submit-button').addEventListener('click', function() {
+      document.querySelector('#btn').addEventListener('click', function() {
             window.location.href = 'slot.html';
         });
+      document.querySelector('.normal').addEventListener('click', function() {
+            window.location.href = 'slot.html';
+        });
+
 </script>
 
 
