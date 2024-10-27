@@ -219,40 +219,56 @@
 //   console.log(`Server is running on http://localhost:${port}`);
 // });
 
+
+// app.post("/get", async (req, res) => {
+    //     const { name, phone, appointmentDate, appointmentTime } = req.body;
+
+
+
+    
+    //     try {
+        //         const accountSid = 'AC493d65ba8693dbb3a678f1154ad6f2ec'; 
+        //         const authToken = 'ecc5546568907574b8a02353f43417cb'; 
+        //         const client = twilio(accountSid, authToken);
+        
+        //         const phone_no = `+91${phone}`;
+        //         const message = await client.messages.create({
+            //             body: `Hi ${name}, your appointment is confirmed on ${appointmentDate} at ${appointmentTime}.`,
+            //             from: 'whatsapp:+14155238886',
+            //             to: `whatsapp:${phone_no}`
+            //         });
+            
+            //         console.log('Message sent:', message.sid);
+            //         res.status(200).send('<script>alert("Appointment booked and message sent!"); window.location.href = "/slot.html";</script>');
+            //     } catch (error) {
+                //         console.error('Error:', error);
+                //         res.status(500).send('<script>alert("Failed to book appointment or send message"); window.location.href = "/slot.html";</script>');
+                //     }
+                // });
+                
+
+
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 
-
+// Serve static files from the 'backend' directory
 app.use(express.static(path.join(__dirname, 'backend')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.post("/get", async (req, res) => {
-//     const { name, phone, appointmentDate, appointmentTime } = req.body;
+// Define routes for home and booking pages
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'backend', 'home.html'));
+});
 
-//     try {
-//         const accountSid = 'AC493d65ba8693dbb3a678f1154ad6f2ec'; 
-//         const authToken = 'ecc5546568907574b8a02353f43417cb'; 
-//         const client = twilio(accountSid, authToken);
-        
-//         const phone_no = `+91${phone}`;
-//         const message = await client.messages.create({
-//             body: `Hi ${name}, your appointment is confirmed on ${appointmentDate} at ${appointmentTime}.`,
-//             from: 'whatsapp:+14155238886',
-//             to: `whatsapp:${phone_no}`
-//         });
+app.get('/booking', (req, res) => {
+    res.sendFile(path.join(__dirname, 'backend', 'bookin.html'));
+});
 
-//         console.log('Message sent:', message.sid);
-//         res.status(200).send('<script>alert("Appointment booked and message sent!"); window.location.href = "/slot.html";</script>');
-//     } catch (error) {
-//         console.error('Error:', error);
-//         res.status(500).send('<script>alert("Failed to book appointment or send message"); window.location.href = "/slot.html";</script>');
-//     }
-// });
-
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
