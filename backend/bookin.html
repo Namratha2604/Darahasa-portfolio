@@ -1,6 +1,3 @@
-</html>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5a28180cca.js" crossorigin="anonymous"></script>
     <style>
-
-        body{
-            background-color: #fff;
+        body {
+            background-color: #d4e8fa;
             font-family: 'Roboto', sans-serif;
         }
-        
+
         h1, h2 {
             font-family: 'Playfair Display', serif;
         }
@@ -57,14 +53,9 @@
             background-color: #3b6ea0;
             color: #e9ecef;
             border-color: #3b6ea0;
-            box-shadow: 0 0 10px rgba(59, 110, 160, 0.5); /* Optional shadow effect */
+            box-shadow: 0 0 10px rgba(59, 110, 160, 0.5);
         }
 
-        .bg-primary-light {
-        background-color: #cfe0f0 !important;
-        transition: all 0.3s ease-in-out;
-        }
-        
         #app {
             margin-left: 12%;
             margin-top: 170px;
@@ -84,14 +75,6 @@
             font-size: 25px;
         }
 
-        .custom-input {
-            font-size: 26px;
-            padding: 10px;
-            border: none;
-            color: #4a4a4a;
-            font-family: 'Roboto', sans-serif;
-        }
-
         .form-section {
             margin-bottom: 200px;
         }
@@ -101,18 +84,19 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        
+
         .input-group {
             flex: 1 1 calc(50% - 20px);
             display: flex;
             flex-direction: column;
         }
-        
+
         .input-group label {
             font-weight: bold;
             margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
         }
-        
+
         .input-group input,
         .input-group select {
             padding: 10px;
@@ -121,133 +105,68 @@
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
             color: #333;
+            background-color: #fff;
+            width: 100%;
+            box-sizing: border-box;
         }
-        
-        .input-group input::placeholder {
+
+        .input-group input::placeholder,
+        .input-group select option:first-child {
             font-style: italic;
             color: #999;
         }
-        
-        .custom-btn {
-            font-size: 20px;
-            padding: 15px 30px;
-            color: #000;
-            background-color: #fff;
-            border-radius: 6px;
-            cursor: pointer;
-            border: solid;
-            transition: 0.3s;
-            border-color: #3b6ea0;
-        }
-        
-        .custom-btn:hover {
-            background-color: #3b6ea0;
-            color: #e9ecef;
-            border-color: #3b6ea0;
-            box-shadow: 0 0 10px rgba(59, 110, 160, 0.5);
-        }
-        .redirect-message {
-            font-size: 16px; /* Default font size */
-            font-family: 'Roboto', sans-serif; /* Default font */
-        }
-        .input-group label {
-            font-family: 'Playfair Display', serif; /* Default font */
-            
-        }
-        .input-group select {
-            padding: 12px !important;
-            border: 1px solid #ccc !important;
-            border-radius: 5px !important;
-            font-size: 16px !important;
-            font-family: 'Roboto', sans-serif !important;
-            color: #333 !important;
-            background-color: #fff;
-        }
-        
-        
-        
-        
+
+        /* Mobile view adjustments */
         @media (max-width: 576px) {
-            input[type="date"], input[type="time"] {
-                font-size: 14px; /* Adjust for smaller screens */
-                padding: 11px; /* Slightly smaller padding */
-                margin-right: -13px;
-            }
             #app {
                 margin-left: 0;
                 margin-top: 30px;
                 text-align: center;
             }
-            
+
             #date-input {
-                margin-left: -2%;
-                margin-top: 30%;
+                margin-left: 0;
+                margin-top: 10%;
                 padding: 0 15px;
                 margin-bottom: 7%;
             }
-            
+
             .form-grid {
-                display: block; /* Stack all inputs on small screens */
+                display: flex;
+                flex-direction: column;
             }
-            
+
             .input-group {
                 width: 100%;
                 margin-bottom: 15px;
             }
-            .custom-btn{
-                margin-left: 3%;
-            }
-            .redirect-message {
-                font-size: 12px; /* Smaller font size for mobile view */
-                white-space: nowrap; /* Ensure the text stays in one line */
-            }
-            .input-group label {
-                
-                font-size: 14px; /* Smaller font size for mobile view */
-                font-family: 'Playfair Display', serif;
-            }
-            .tub{
-                font-size: 14px;
-            }
-            
+
+            .input-group input,
             .input-group select {
-                padding: 12px !important;
-                border: 1px solid #ccc !important;
-                border-radius: 5px !important;
-                font-size: 16px !important;
-                font-family: 'Roboto', sans-serif !important;
-                color: #333 !important;
-                background-color: #fff;
-                margin-right: -13px;
+                font-size: 14px;
+                padding: 12px;
+                border-radius: 6px;
+            }
+
+            .custom-btn {
+                font-size: 16px;
+                padding: 12px 20px;
+                margin-left: 0;
+            }
+
+            .redirect-message {
+                font-size: 12px;
+                white-space: normal;
             }
         }
-        
-        body {
-            background-color: #cfe0f0;
-        }
-        
-        .nav-link {
-        cursor: pointer;
-        transition: color 0.3s ease; /* Smooth transition effect */
-        }
-        
-        .nav-link:hover {
-        color: #4CAF50 !important;
-        transition: color 0.3s ease !important;
-        }
-        </style>
+    </style>
 </head>
 
 <body>
-    
-
-    <!-- Header Section -->
     <section id="header" class="bg-light p-3">
         <nav class="navbar navbar-expand-lg navbar-light" id="nav" style="background-color: #3b6ea0; padding: 30px;">
             <div class="container">
-                <!-- <a class="navbar-brand text-white" href="#">WhatsUp Dentist</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -270,54 +189,40 @@
         </nav>
     </section>
 
-
-    <!-- <section id="app" class="container-fluid">
-    </section> -->
-    
     <section id="date-input" class="container-fluid">
-
         <div style="margin-top: 15%; margin-left: 15%; margin-bottom: 5%;">
             <h1 class="display-4 display-6-md">Dental Check-Up Booking</h1>
             <p class="fs-5 fs-6-md">Check out our availability and book the date and time that works for you</p>
         </div>
-        
-        
         <form class="form-section mx-auto" style="max-width: 70%;" onsubmit="Watsapp()">
             <h1 id="cd">Client Details</h1>
             <hr>
             <p class="tub">Tell us a bit about yourself</p>
-
             <div class="form-grid">
                 <div class="input-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="John" required>
                 </div>
-
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="abc@mail.com" required>
                 </div>
-
                 <div class="input-group">
                     <label for="phone">Phone number</label>
                     <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" placeholder="0000000000" required>
                 </div>
-
                 <div class="input-group">
                     <label for="appointmentDate">Select Appointment Date</label>
-                    <input type="date" id="appointmentDate" name="appointmentDate">
+                    <input type="date" id="appointmentDate" name="appointmentDate" placeholder="DD/MM/YYYY">
                 </div>
-
                 <div class="input-group">
                     <label for="appointmentTime">Select Appointment Time</label>
-                    <input type="time" id="appointmentTime" name="appointmentTime" min="12:00" max="16:00" required>
+                    <input type="time" id="appointmentTime" name="appointmentTime" placeholder="HH:MM">
                 </div>
-
                 <div class="input-group">
                     <label for="ageInput">Enter Your Age</label>
-                    <input type="number" id="ageInput" name="age" min="0" required>
+                    <input type="number" id="ageInput" name="age" placeholder="Age" min="0" required>
                 </div>
-
                 <div class="input-group">
                     <label for="genderSelect">Select Gender</label>
                     <select id="genderSelect" name="gender" required>
@@ -328,17 +233,13 @@
                     </select>
                 </div>
             </div>
-
-            <div class="text-center" style="margin-top: 5%;" >
-                
+            <div class="text-center" style="margin-top: 5%;">
                 <button type="submit" class="custom-btn mt-3">Submit</button>
-                <h3 class="redirect-message" style="margin-top: 5%;"> &nbsp; NOTE : This will redirect you to WhatsApp</h3>
+                <h3 class="redirect-message" style="margin-top: 5%;">NOTE: This will redirect you to WhatsApp</h3>
             </div>
         </form>
     </section>
 
-
-    <!-- Footer Section -->
     <section id="footer" class="py-5" style="background-color: #3b6ea0;">
         <div class="container text-center">
             <p style="color: #cfe0f0;">&copy; 2024 WhatsUp Dentist. All rights reserved.</p>
@@ -348,48 +249,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function Watsapp() {
-    const phoneInput = document.getElementById('phone').value;
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const appointmentDate = document.getElementById("appointmentDate").value;
-    const appointmentTime = document.getElementById("appointmentTime").value;
-    const age = document.getElementById("ageInput").value;
-    const gender = document.getElementById("genderSelect").value;
-    
-    // Email is optional
-    const email = document.getElementById("email").value;
-
-    // Check if all required fields are filled
-    if (!name || !phone || !appointmentDate || !appointmentTime || !age || !gender) {
-        alert("Please fill out all required fields.");
-        return;
-    }
-    if (email && !email.includes('@')) {
-        alert('Please enter a valid email address with "@".');
-        return;
-    }
-
-    // Validate 10-digit phone number
-    if (!(/^\d{10}$/.test(phoneInput))) {
-        alert('Please enter a valid 10-digit phone number.');
-    } else {
-
-        var url = "https://wa.me/918639001581?text="
-            + "Name: " + name + "%0a"
-            + (email ? "Email: " + email + "%0a" : "")  // Add email only if it's provided
-            + "Phone: " + phone + "%0a"
-            + "Date: " + appointmentDate + "%0a"
-            + "Time: " + appointmentTime + "%0a"
-            + "Age: " + age + "%0a"
-            + "Gender: " + gender;
-
-        window.open(url, '_blank').focus();
-    }
-}
-
-     </script>
-
-    <!-- Content here -->
-
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('appointmentDate').value;
+            const time = document.getElementById('appointmentTime').value;
+            const gender = document.getElementById('genderSelect').value;
+            const url = `https://wa.me/<YOUR_NUMBER>?text=Name:${name}%0APhone:${phone}%0ADate:${date}%0ATime:${time}%0AGender:${gender}`;
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
+
 </html>
