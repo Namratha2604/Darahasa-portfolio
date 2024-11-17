@@ -254,8 +254,16 @@
             const date = document.getElementById('appointmentDate').value;
             const time = document.getElementById('appointmentTime').value;
             const gender = document.getElementById('genderSelect').value;
-            const url = `https://wa.me/<YOUR_NUMBER>?text=Name:${name}%0APhone:${phone}%0ADate:${date}%0ATime:${time}%0AGender:${gender}`;
-            window.open(url, '_blank');
+            var url = "https://wa.me/918639001581?text="
+            + "Name: " + name + "%0a"
+            + (email ? "Email: " + email + "%0a" : "")  // Add email only if it's provided
+            + "Phone: " + phone + "%0a"
+            + "Date: " + appointmentDate + "%0a"
+            + "Time: " + appointmentTime + "%0a"
+            + "Age: " + age + "%0a"
+            + "Gender: " + gender;
+
+        window.open(url, '_blank').focus();
         }
     </script>
 </body>
