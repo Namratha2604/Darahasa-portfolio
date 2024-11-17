@@ -96,8 +96,23 @@
             margin-bottom: 5px;
             font-family: 'Playfair Display', serif;
         }
+        input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="date"], 
+input[type="time"], 
+select {
+    padding: 12px !important; /* Ensures consistent padding */
+    font-size: 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    font-family: 'Roboto', sans-serif !important;
+    color: #333 !important;
+    background-color: #fff !important;
+}
 
-        .input-group input,
+        /* .input-group input,
         .input-group select {
             padding: 10px;
             border: 1px solid #ccc;
@@ -108,20 +123,18 @@
             background-color: #fff;
             width: 100%;
             box-sizing: border-box;
-        }
+        } */
 
-        .input-group input::placeholder,
-        .input-group select option:first-child {
-            font-style: italic;
-            color: #999;
-        }
-        input[type="date"],
-        input[type="time"] {
-            -webkit-appearance: none; /* Disable native styling on iOS */
-            appearance: none;
-            width: 100%;
-        }
+        input[type="date"]::-webkit-input-placeholder, 
+input[type="time"]::-webkit-input-placeholder {
+    color: #999; /* Placeholder color */
+    font-style: italic; /* Placeholder font style */
+}
 
+input[type="date"]:focus::-webkit-input-placeholder,
+input[type="time"]:focus::-webkit-input-placeholder {
+    color: transparent; /* Hide placeholder on focus */
+}
         .input-group select option:first-child {
             display: none;
         }
