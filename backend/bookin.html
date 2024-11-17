@@ -1,3 +1,6 @@
+</html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5a28180cca.js" crossorigin="anonymous"></script>
     <style>
 
         body{
             background-color: #fff;
+            font-family: 'Roboto', sans-serif;
         }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
         #nav {
             position: fixed;
             top: 0;
@@ -29,7 +39,6 @@
 
         #hero {
             margin-top: 150px;
-            
         }
 
         .custom-btn {
@@ -80,7 +89,7 @@
             padding: 10px;
             border: none;
             color: #4a4a4a;
-            font-family: 'Courier New', monospace;
+            font-family: 'Roboto', sans-serif;
         }
 
         .form-section {
@@ -110,7 +119,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Roboto', sans-serif;
             color: #333;
         }
 
@@ -137,6 +146,15 @@
             border-color: #3b6ea0;
             box-shadow: 0 0 10px rgba(59, 110, 160, 0.5);
         }
+        .redirect-message {
+    font-size: 16px; /* Default font size */
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+.input-group label {
+    font-family: 'Playfair Display', serif; /* Default font */
+    
+}
+        
 
         /* Ensure proper stacking on small screens */
         @media (max-width: 576px) {
@@ -162,8 +180,20 @@
                 margin-bottom: 15px;
             }
             .custom-btn{
-                margin-left: 20%;
+                margin-left: 3%;
             }
+            .redirect-message {
+        font-size: 12px; /* Smaller font size for mobile view */
+        white-space: nowrap; /* Ensure the text stays in one line */
+    }
+    .input-group label {
+        
+        font-size: 14px; /* Smaller font size for mobile view */
+        font-family: 'Playfair Display', serif;
+    }
+    .tub{
+        font-size: 14px;
+    }
         }
 
         body {
@@ -173,6 +203,7 @@
 </head>
 
 <body>
+
 
     <!-- Header Section -->
     <section id="header" class="bg-light p-3">
@@ -208,14 +239,17 @@
     </section> -->
     
     <section id="date-input" class="container-fluid">
-        <div style="margin-top: 15%; margin-left: 15%; margin-bottom: 5%; ">
-            <h1>Dental Check-Up Booking</h1>
-            <p>Check out our availability and book the date and time that works for you</p>
+
+        <div style="margin-top: 15%; margin-left: 15%; margin-bottom: 5%;">
+            <h1 class="display-4 display-6-md">Dental Check-Up Booking</h1>
+            <p class="fs-5 fs-6-md">Check out our availability and book the date and time that works for you</p>
         </div>
+        
+        
         <form class="form-section mx-auto" style="max-width: 70%;" onsubmit="Watsapp()">
             <h1 id="cd">Client Details</h1>
             <hr>
-            <p>Tell us a bit about yourself</p>
+            <p class="tub">Tell us a bit about yourself</p>
 
             <div class="form-grid">
                 <div class="input-group">
@@ -318,6 +352,8 @@
 }
 
      </script>
-</body>
 
+    <!-- Content here -->
+
+</body>
 </html>
