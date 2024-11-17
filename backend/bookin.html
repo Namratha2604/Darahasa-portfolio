@@ -158,6 +158,10 @@
 
         /* Ensure proper stacking on small screens */
         @media (max-width: 576px) {
+            input[type="date"], input[type="time"] {
+        font-size: 14px; /* Adjust for smaller screens */
+        padding: 8px; /* Slightly smaller padding */
+    }
             #app {
                 margin-left: 0;
                 margin-top: 30px;
@@ -199,6 +203,7 @@
         body {
             background-color: #cfe0f0;
         }
+
     </style>
 </head>
 
@@ -269,12 +274,12 @@
 
                 <div class="input-group">
                     <label for="appointmentDate">Select Appointment Date</label>
-                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    <input type="date" id="appointmentDate" name="appointmentDate">
                 </div>
 
                 <div class="input-group">
                     <label for="appointmentTime">Select Appointment Time</label>
-                    <input type="time" id="appointmentTime" name="appointmentTime" min="14:00" max="16:00" required>
+                    <input type="time" id="appointmentTime" name="appointmentTime" min="12:00" max="16:00" required>
                 </div>
 
                 <div class="input-group">
