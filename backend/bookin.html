@@ -122,6 +122,15 @@
             width: 100%;
         }
 
+        .input-group select option:first-child {
+            display: none;
+        }
+
+        .input-group input::placeholder,
+        .input-group select option {
+            font-style: italic;
+            color: #999 !important;
+        }
         /* Mobile view adjustments */
         @media (max-width: 576px) {
             #app {
@@ -151,8 +160,8 @@
 
             .input-group input,
             .input-group select {
-                font-size: 14px;
-                padding: 12px;
+                font-size: 14px !important;
+                padding: 12px !important;
                 border-radius: 6px;
             }
             .tub{
